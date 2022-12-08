@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guest House Form</title>
+  </head>
+  <body>
+    <form>
+      <label for="rank"> Rank: </label>
+      <select name="rank" id="rank">
+        <option disabled selected value>-- select an option --</option>
+        <option value="rank1">Rank 1</option>
+        <option value="rank2">Rank 2</option>
+        <option value="rank3">Rank 3</option>
+        <option value="rank4">Rank 4</option>
+      </select>
+      <label for="fname">First name:</label><br />
+      <input type="text" id="fname" name="fname" required /><br />
+      <label for="lname">Last name:</label><br />
+      <input type="text" id="lname" name="lname" required /><br />
+      <label for="phone">Phone number(Prefarably on Whatsapp):</label
+      ><br /><br />
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Enter your phone number with country code"
+        pattern="/^\+(\d{1}\-)?(\d{1,3})$/-[0-9]{10}"
+        required
+      /><br /><br />
+      <small>Format: +91-9717213772</small><br /><br />
+      <label for="roomsNo">No of rooms required</label><br />
+      <input type="number" name="roomsNo" id="roomsNo" min="1" max="19" /><br />
+      <label for="guestsNo">No of guests expected</label><br />
+      <input
+        type="number"
+        name="guestsNo"
+        id="guestsNo"
+        min="1"
+        max="99"
+      /><br />
+      <label for="arrivalDate">Arrival Date:</label><br />
+      <input type="date" id="arrivalDate" name="arrivalDate" required /><br />
+      <label for="departureDate">Departure Date:</label><br />
+      <input
+        type="date"
+        id="departureDate"
+        name="departureDate"
+        required
+      /><br />
+      <label for="location">Prefarable Location:</label><br />
+      <select name="location" id="location">
+        <option disabled selected value>-- select an option --</option>
+        <option value="ddn">Dehradun</option>
+        <option value="msr">Musoorie</option>
+        <option value="mdk">Mandakini</option></select
+      ><br />
+      <!--Any Special Request (I will do this later)-->
+
+      <label for="misc">Misc Request</label><br />
+      <select name="misc" id="misc">
+        <option disabled selected value>-- select an option --</option>
+        <option value="pet">Pet</option>
+        <option value="bed">Extra Bed</option>
+        <option value="others">Others</option></select
+      ><br />
+      <label for="othersT" visibility="hidden"
+        >If others, please specify the request</label
+      ><br />
+      <input
+        type="text"
+        visibility="hidden"
+        name="othersT"
+        id="othersT"
+      /><br />
+      <input type="submit" /><br />
+    </form>
+  </body>
+</html>
